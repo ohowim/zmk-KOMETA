@@ -21,25 +21,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "balanced";
-            require-prior-idle-ms = <120>;
-            hold-trigger-on-release;
-        };
-
-        copy: copy {
-            compatible = "zmk,behavior-tap-dance";
-            label = "COPY";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&kp K_COPY>;
-        };
-
-        paste: paste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PASTE";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp INSERT>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -50,7 +34,7 @@
             bindings = <
 &kp LEFT_BRACKET  &kp Q  &kp W           &kp E        &kp R            &kp T        &kp Y        &kp U            &kp I        &kp O            &kp P     &kp RIGHT_BRACKET
 &kp GRAVE         &kp A  &hr LEFT_ALT S  &hr LCTRL D  &hr LEFT_GUI F   &kp G        &kp H        &hr RIGHT_WIN J  &hr RCTRL K  &hr RIGHT_ALT L  &kp SEMI  &kp SQT
-&kp BSLH          &kp Z  &kp X           &copy        &paste           &kp B        &kp N        &kp M            &kp COMMA    &kp DOT          &kp FSLH  &kp RG(SPACE)
+&kp BSLH          &kp Z  &kp X           &kp C        &kp V            &kp B        &kp N        &kp M            &kp COMMA    &kp DOT          &kp FSLH  &kp RG(SPACE)
                                          &lt RSE TAB  &mt LSHFT SPACE  &lt LWR RET  &lt LWR ESC  &mt RSHFT BSPC   &lt RSE DEL
             >;
         };
